@@ -1,5 +1,10 @@
 #include <iostream>
 #include "juego.h"
+
+#include <conio.h>
+#include <windows.h>
+#include <mmsystem.h>
+
 using namespace std;
 
 // Prototipos
@@ -9,12 +14,16 @@ void mainTheme();
 void mainTheme();
 void ultimaPartida();
 
+void sonidoPrueba1(){
+    //PlaySound(TEXT("juego.wav"),NULL,SND_SYNC);
+}
+
 void mainTheme(){
-    cout << "----------------------" << endl;
-    cout << "|   PIEDRA           |" << endl;
-    cout << "|       PAPEL        |" << endl;
-    cout << "|           TIJERA   |" << endl;
-    cout << "----------------------" << endl;
+    cout << "------------------------" << endl;
+    cout << "| |  PIEDRA          | |" << endl;
+    cout << "| |      PAPEL       | |" << endl;
+    cout << "| |          TIJERA  | |" << endl;
+    cout << "------------------------" << endl;
     system("pause > nul");
 }
 
@@ -28,20 +37,18 @@ void menuPrincipal() {
     while(true){
         system("cls");
 
-        cout << "------------------------------" << endl;
-        cout << "       MENU PRINCIPAL" << endl;
-        cout << "------------------------------" << endl;
+        cout << BOLD << BLUE;
+        cout << "|------------------------------|" << endl;
+        cout << "|        " << CYAN << "MENU PRINCIPAL" << BLUE << "        |" << endl;
+        cout << "|------------------------------|" << endl;
+        cout << "|    "<< GREEN <<"   1 - Un Jugador         "<< BLUE <<"|" << endl;
+        cout << "|    "<< GREEN <<"   2 - Dos Jugadores      "<< BLUE <<"|" << endl;
+        cout << "|    "<< GREEN <<"   3 - Ultima Partida     "<< BLUE <<"|" << endl;
+        cout << "|------------------------------|" << endl;
+        cout << "|    "<< RED <<"   0 - Salir              "<< BLUE <<"|" << endl;
+        cout << "|------------------------------"<< BLUE <<"|" << endl;
         cout << endl;
-
-        cout << "1 - Un Jugador" << endl;
-        cout << "2 - Dos Jugadores" << endl;
-        cout << "3 - Ultima Partida" << endl;
-        cout << endl;
-        cout << "------------------------------" << endl;
-        cout << "0 - Salir" << endl;
-        cout << endl;
-
-        cout << "Ingrese Opcion: ";
+        cout << "     "<< YELLOW <<"   Ingrese Opcion: " << RESET;;
         cin >> opc;
 
         switch (opc)

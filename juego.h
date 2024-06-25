@@ -4,6 +4,18 @@
 #include <string>
 using namespace std;
 
+// Definición de códigos de color ANSI
+const string RESET = "\033[0m";
+const string RED = "\033[31m";
+const string GREEN = "\033[32m";
+const string YELLOW = "\033[33m";
+const string BLUE = "\033[34m";
+const string MAGENTA = "\033[35m";
+const string CYAN = "\033[36m";
+const string WHITE = "\033[37m";
+const string BOLD = "\033[1m";
+
+
 // Prototipos
 void unJugador(string &, string &, int &, int &);
 int ronda(string &, string &);
@@ -153,31 +165,31 @@ void mostrarOpcion(string &player, int &option){
     cout << endl;
 
     if(option==1){
-        cout << "      ___________" << endl;
+        cout << GREEN <<"      ___________" << endl;
         cout << "_ _ _|      _____)__" << endl;
         cout << "               __ __)" << endl;
         cout << "                 ___)" << endl;
         cout << "                 ___)" << endl;
         cout << "- - -.______________)" << endl;
-        cout << "       PIEDRA" << endl;
+        cout << "       PIEDRA" << RESET <<endl;
     }
     else if(option==2){
-        cout << "      _____________" << endl;
+        cout << YELLOW << "      _____________" << endl;
         cout << "_ _ _|      _______)_______" << endl;
         cout << "                 __ _______)_" << endl;
         cout << "                 ____________)" << endl;
         cout << "                 ___________)" << endl;
         cout << "- - -.__________________)" << endl;
-        cout << "       PAPEL" << endl;
+        cout << "       PAPEL" << RESET <<endl;
     }
     else{
-        cout << "      _____________" << endl;
+        cout << RED << "      _____________" << endl;
         cout << "_ _ _|      _______)_______" << endl;
         cout << "                 __ _______)" << endl;
         cout << "                 ____)" << endl;
         cout << "                 ____)__" << endl;
         cout << "- - -.__________________)" << endl;
-        cout << "       TIJERA" << endl;
+        cout << "       TIJERA" << RESET << endl;
     }
     cout << endl << endl;
 }
